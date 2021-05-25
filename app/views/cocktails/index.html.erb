@@ -1,4 +1,6 @@
 <h1>hi index</h1>
+<%= link_to 'Add a cocktail', new_cocktail_path %>
+<br>
 <% @cocktails.each do |cocktail| %>
   <%= link_to cocktail_path(cocktail), style: "text-decoration: none" do %>
     <%= cocktail.name %>
