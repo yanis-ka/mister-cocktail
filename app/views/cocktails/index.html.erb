@@ -1,0 +1,9 @@
+<h1>hi index</h1>
+<% @cocktails.each do |cocktail| %>
+  <%= link_to cocktail_path(cocktail), style: "text-decoration: none" do %>
+    <%= cocktail.name %>
+    <%# if cocktail.photo.attached? %>
+      <%#= cl_image_path cocktail.photo.key, crop: :fill %>
+    <%# end %>
+  <% end %>
+<% end %>
