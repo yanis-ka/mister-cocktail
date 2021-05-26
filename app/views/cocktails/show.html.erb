@@ -1,5 +1,6 @@
 <h1>coucou show</h1>
 <%= @cocktail.name %>
+<%= @cocktail.price %>
 <%#= cl_image_tag @cocktail.photo.key, class: "yes" ,crop: :fill %>
 <% unless @cocktail.doses.empty? %>
   <%= @cocktail.doses.each do |dose| %>

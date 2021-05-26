@@ -1,11 +1,16 @@
 <h1>hi index</h1>
 <%= link_to 'Add a cocktail', new_cocktail_path %>
 <br>
+<br>
 <% @cocktails.each do |cocktail| %>
+  <li>
   <%= link_to cocktail_path(cocktail), style: "text-decoration: none" do %>
     <%= cocktail.name %>
+    <%= cocktail.price%>,00€
     <%# if cocktail.photo.attached? %>
       <%#= cl_image_path cocktail.photo.key, crop: :fill %>
     <%# end %>
+  </li>
+  <br>
   <% end %>
 <% end %>
