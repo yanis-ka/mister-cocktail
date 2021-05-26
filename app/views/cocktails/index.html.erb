@@ -3,14 +3,13 @@
 <br>
 <br>
 <% @cocktails.each do |cocktail| %>
-  <li>
+  <div class="cocktail-card">
   <%= link_to cocktail_path(cocktail), style: "text-decoration: none" do %>
     <%= cocktail.name %>
     <%= cocktail.price%>,00€
     <% if cocktail.photo.attached? %>
-      <%= cl_image_path cocktail.photo.key, crop: :fill %>
+      <%= cl_image_tag cocktail.photo.key, class: "yes" ,crop: :fill %>
     <% end %>
-  </li>
-  <br>
+  </div>
   <% end %>
 <% end %>
