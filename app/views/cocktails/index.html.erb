@@ -5,11 +5,13 @@
 <% @cocktails.each do |cocktail| %>
   <div class="cocktail-card">
   <%= link_to cocktail_path(cocktail), style: "text-decoration: none" do %>
-    <%= cocktail.name %>
-    <%= cocktail.price%>,00€
     <% if cocktail.photo.attached? %>
-      <%= cl_image_tag cocktail.photo.key, class: "yes" ,crop: :fill %>
+      <%= cl_image_tag cocktail.photo.key, class: "img-card" ,crop: :fill %>
     <% end %>
+    <div class="txt-card">
+      <%= cocktail.name %>
+      <%= cocktail.price%>,00€
+    </div>
   </div>
   <% end %>
 <% end %>
