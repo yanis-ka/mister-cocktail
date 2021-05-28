@@ -15,9 +15,25 @@
  */
 
 body{
-  background-image: url("mesh-gradient.png");
+  background-image: url("mesh-gradient2.png");
   color: white;
 }
 
+.navbar{
+  width: auto;
+  height: 75px;
+  background-color: rgba(25, 25, 25,0.6);
+  z-index: 10;
+  margin: -10px;
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
 
+.navbar > img{
+  width: 75px;
+  height: 50px;
+}
 
