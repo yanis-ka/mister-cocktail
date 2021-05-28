@@ -16,32 +16,28 @@
     width: 500px;
   }
 }
-@media (max-width: 540px) {
+@media (max-width: 480px) {
   /* For a screen < 540px, this CSS will be read */
   .container {
     width: 300px;
   }
 }
 
-body{
-  background-color: rgba(30,80,150,0.2);
-}
-
 .cocktail-cards{
   display: grid;
-  grid-gap: 30px 30px;
+  grid-gap: 30px 5%;
   grid-template-columns: repeat(1, 1fr);
 }
 
 @media screen and (min-width: 480px){
   .cocktail-cards{
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 1024px){
   .cocktail-cards{
-    grid-template-columns:repeat(5, 1fr);
+    grid-template-columns:repeat(3, 1fr);
   }
 }
 
