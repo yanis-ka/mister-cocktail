@@ -2,7 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+h1{
+  text-align: center;
+}
 
+a{
+  text-decoration: none;
+  color: white;
+}
 
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
@@ -24,8 +31,9 @@
 }
 
 .cocktail-cards{
+  margin-left: 2%;
   display: grid;
-  grid-gap: 30px 5%;
+  grid-gap: 30px 20px;
   grid-template-columns: repeat(1, 1fr);
 }
 
@@ -35,18 +43,24 @@
   }
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 720px){
   .cocktail-cards{
     grid-template-columns:repeat(3, 1fr);
   }
 }
 
+@media screen and (min-width: 1024px){
+  .cocktail-cards{
+    grid-template-columns:repeat(4, 1fr);
+  }
+}
+
 .cocktail-card{
-  width: 100%;
+  width: 270px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: white;
+  background: rgba(25, 25, 25,0.6);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
 }
@@ -56,12 +70,19 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 0 5px;
 }
 
 .img-card{
   height: 150px;
   width: 100%;
 }
+
+.img-card > img{
+  width: 100%;
+  object-fit: cover;
+}
+
 
 // .card-trip {
 //   overflow: hidden;
@@ -87,19 +108,4 @@
 //   margin: 0;
 // }
 
-
-// .card-trip .card-trip-infos {
-//   padding: 16px;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: flex-end;
-//   position: relative;
-// }
-
-// .card-trip-infos .card-trip-user {
-//   position: absolute;
-//   right: 16px;
-//   top: -20px;
-//   width: 40px;
-// }
 
