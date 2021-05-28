@@ -15,7 +15,8 @@
  */
 
 body{
-  background-color: rgba(30,80,150,0.2);
+  background-image: url("mesh-gradient.png");
+  color: white;
 }
 
 
