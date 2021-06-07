@@ -1,0 +1,10 @@
+<div class="navbar">
+  <h2>Mister Cocktail</h2>
+  <%= link_to 'Add a cocktail', new_cocktail_path %>
+  <div>
+    <form action="find">
+      <input class="search-input" type="text" name="search" value="<%=params[:search]%>" placeholder="Search by ingredient">
+      <button class="btn-search" type="submit">Search</button>
+    </form>
+  </div>
+</div>
